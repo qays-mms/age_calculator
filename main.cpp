@@ -30,7 +30,7 @@ int main()
 	cout << "\t\t"<<"Welcome to visit" << heart_char << "\n\nQays Mms" << heart_char << "\n\n";
 
 
-	cout<<
+
 
 	system("pause");
 }
