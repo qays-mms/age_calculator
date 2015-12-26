@@ -50,12 +50,13 @@ void funage(int &year, int &month, int &day)
 
 void currectDate(int &year, int &month, int&day)
 {
-	time_t t = time(0); // get time now
-    struct tm * now = localtime( & t );
+	time_t time_create = time(NULL);
+	struct tm now;
+	localtime_s(&now, &time_create);
 
 	int Birth_date, The_current_date;
 
-	Birth_date =((now->tm_year + 1900) * 12 * 30) + ((now->tm_mon + 1) * 30) + now->tm_mday;
+	Birth_date =((now.tm_year + 1900) * 12 * 30) + ((now.tm_mon + 1) * 30) + now.tm_mday;
 	
 	The_current_date = (year * 12 * 30) + (month * 30) + day;
 
